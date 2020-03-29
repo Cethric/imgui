@@ -52,7 +52,7 @@ IMGUI_IMPL_API void     ImGui_ImplOpenGL3_DestroyDeviceObjects();
     #if defined(__has_include)
         #if __has_include(<GL/glew.h>)
             #define IMGUI_IMPL_OPENGL_LOADER_GLEW
-        #elif __has_include(<glad/glad.h>)
+        #elif __has_include(<glad/gl.h>)
             #define IMGUI_IMPL_OPENGL_LOADER_GLAD
         #elif __has_include(<GL/gl3w.h>)
             #define IMGUI_IMPL_OPENGL_LOADER_GL3W
@@ -62,7 +62,7 @@ IMGUI_IMPL_API void     ImGui_ImplOpenGL3_DestroyDeviceObjects();
             #error "Cannot detect OpenGL loader!"
         #endif
     #else
-        #define IMGUI_IMPL_OPENGL_LOADER_GL3W       // Default to GL3W
+        #define IMGUI_IMPL_OPENGL_LOADER_GLAD       // Default to GL3W
     #endif
 #endif
 
